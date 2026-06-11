@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HOME</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+    h1 {
+      text-align: center;
+      font-size: 50px;
+      color: #d11c73;
+    }
+
+    body {
+      margin: 0;
+      padding: 20px;
+      background: #f9f9f9;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background-color: #d11c73;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 700;
+      color: white;
+    }
+    .header-left img {
+      max-width: 60px;
+      height: auto;
+    }
+    .header-right a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    section {
+      margin-top: 30px;
+    }
+    #home {
+      background-image: url('https://images.unsplash.com/photo-1607013251379-d979b2c043f3?auto=format&fit=crop&w=1600&q=80');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    #about {
+      background-image: url();
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    #contact {
+      background-image: url('https://images.unsplash.com/photo-1557682250-33bd709cbe85?auto=format&fit=crop&w=1600&q=80');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .image-row {
+      display: flex;
+      justify-content: center;
+      gap: 70px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+
+    .image-row img {
+      width: 300px;
+      height: 300px;
+      border-radius: 100%;
+      object-fit: cover;
+      border: 2px solid #333;
+    }
+   
+
+    @media (max-width: 600px) {
+      .image-row img {
+        width: 140px;
+        height: 140px;
+      }
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+    a {
+      color: #ffddf1;
+    }
+    
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-left">
+        <img src="logo.jpeg">
+      <div class="logo">EventEase</div>
+    </div>
+    <div class="header-right">
+      <nav aria-label="Main navigation">
+        <a href="#home">HOME</a>
+        <a href="#about">ABOUT</a>
+        <a href="#services">SERVICES</a>
+        <a href="#contact">CONTACT</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="home">
+    <h1>Welcome to Home</h1>
+    <div class="image-row">
+        <a href="marrige.html">
+       
+      <img src="Hindu wedding.jpg" alt="Wedding Event 1">
+        </a>
+        <a href="birthday.html">
+      <img src="birthdaya.jpeg" alt="Wedding Event 2">
+        </a>
+        <a href="halfsarre.html">
+      <img src="half saree.jpg" alt="Wedding Event 3">
+        </a>
+        <a href="namedec.html">
+   <img src="naming ceremony.jpg" alt="Ceremony Event 1">
+        </a>
+
+    </div>
+  </section>
+
+  <section id="services">
+    <h1>Our Services</h1>
+    <p>We offer comprehensive event management services including wedding planning, birthday parties, naming ceremonies, and more. Our expert team ensures your special moments are celebrated just the way you imagined.</p>
+  </section>
+
+  <section id="about">
+    <h1 style="color:#d11c73;">About Us</h1>
+    <p style="color:black;">
+      EventEase is a full-service event management company dedicated to turning your special moments into unforgettable celebrations.
+      From grand weddings to intimate naming ceremonies, we bring creativity, planning expertise, and flawless execution to every event.
+      <br><br>
+      We are committed to delivering creatively designed, perfectly executed, and emotionally resonant events that reflect your personality, culture, and dreams.
+      <br><br>
+      Founded with a passion for storytelling through experiences, our team brings years of expertise in organizing events of every scale.
+      We understand that every client is unique, and so are their occasions. That's why we offer personalized planning, styling, and coordination
+      tailored to your vision, your budget, and your traditions.
+    </p>
+  </section>
+
+  <section id="contact">
+    <h1>Contact</h1>
+    <p>
+      📧 Email: <a href="mailto:info@eventease.com">info@eventease.com</a><br>
+      📞 Phone: 123-456-7890<br>
+      📍 Address: 123 Celebration Lane, Event City, India
+    </p>
+  </section>
+  <script>
+    if (sessionStorage.getItem('isLoggedIn') !== 'true') {
+      alert("Please login first.");
+      window.location.href = "login.html"; // Replace with your login file name
+    }
+  </script>
+  
+</body>
+</html>

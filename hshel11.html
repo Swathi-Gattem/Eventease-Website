@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f1f3f6;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Header */
+    header {
+      background-color: #d11c73;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .header-left img {
+      height: 50px;
+      width: 50px;
+      border-radius: 5px;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+    }
+
+    .back-link {
+      font-size: 30px;
+      text-decoration: none;
+      color: white;
+    }
+
+  
+
+    /* Container */
+    .container {
+      background-color: #fff;
+      padding: 20px;
+      margin: 30px auto;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      max-width: 900px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .main-image {
+      width: 100%;
+      max-width: 450px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .buttons {
+      margin: 15px 0;
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .buttons button {
+      padding: 10px 25px;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .add-cart {
+      background-color: #ff4081;
+      color: white;
+    }
+
+    .buy-now {
+      background-color: #3f51b5;
+      color: white;
+    }
+
+    .product-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .price {
+      color: #e53935;
+      font-size: 22px;
+      margin: 10px 0;
+      text-align: center;
+    }
+
+    
+    .details, .seller, .ratings {
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .ratings-bar {
+      height: 8px;
+      background-color: #ddd;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .ratings-fill {
+      height: 100%;
+      background-color: #4caf50;
+    }
+
+    .reviews {
+      background-color: #fafafa;
+      padding: 10px;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+
+    .review {
+      border-top: 1px solid #ddd;
+      padding: 10px 0;
+    }
+
+    .message {
+      margin-top: 10px;
+      font-weight: bold;
+      color: #007bff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-left">
+      <a href="javascript:history.back()" class="back-link">&larr;</a>
+      <img src="logo.jpeg" alt="Logo">
+      <div class="logo">EventEase</div>
+    </div>
+   
+  </header>
+
+  <!-- Product Container -->
+  <div class="container">
+    <img src="held6.jpeg" alt="Product" class="main-image">
+
+    <div class="buttons">
+      <button class="add-cart" onclick="toggleCart()">Add to Cart</button>
+      <a href="buy.html"><button class="buy-now">Buy Now</button></a>
+    </div>
+
+    <p id="cartMessage" class="message"></p>
+
+    <div class="right-section">
+      <div class="product-title"> Gold Mirror Ring</div>
+      <p> A modern-luxury style theme with elegant metallic finishes. It’s minimalist, classy, and ideal for receptions or photo-focused events.</p>
+      <div class="price">₹20000 <span style="font-size: 14px; color: #666;"></span></div>
+
+     
+
+      <div class="details">
+        <h3>Product Details</h3>
+        <p>
+          <strong>🌼 Theme Name:</strong> Gold Mirror Ring<br>
+          <strong> Stage Platform:</strong>Flat indoor platform
+Floral rangoli placed slightly in front of seating
+Optional reflective base or tiles for enhanced lighting effec<br>
+        <strong>Seating:</strong>Gold-painted love seat or sofa with velvet cushions
+Accented with matching pillows for premium appeal<br>
+        <strong>Backdrop:</strong>Large metallic circular ring frame
+Decorated partially with blush roses, pampas grass, and fairy lights
+Neutral fabric background (cream, beige, or pastel) for softness
+        <br>
+        <strong>Surrounding Decor:</strong>Urli bowls with floating petals and candles
+Tall standing lamps or modern pedestal lights
+Gold vases or sequin drapes on the sides
+        <br>
+        <strong>Props & Signage:</strong>Golden mirror ring is primary visual prop
+Neon name sign (“Mehndi Magic”, “Bride & Co.”)
+Side selfie standee or Instagram hashtag signage.<br>
+        <strong>Nature Elements:</strong>Real rose petals, banana leaf base accents
+Orchids or tulips in floral setup
+Scented candles with floral oils
+<br>
+        <strong>Origin:</strong> India</p>
+      </div>
+
+      <div class="seller">
+        <h3>Sold By</h3>
+        <p><strong>EVENTEASE</strong><br>
+        ★ 4.8 | 203 ratings</p>
+      </div>
+
+      <div class="ratings">
+        <h3>Ratings & Reviews</h3>
+        <p style="font-size: 24px; font-weight: bold;">4.8★</p>
+        <div class="ratings-bar">
+          <div class="ratings-fill" style="width: 80%;"></div>
+        </div>
+
+        <div class="reviews">
+          <div class="review"><strong>Meena</strong> – “Very comfortable and nice quality.”</div>
+          <div class="review"><strong>Manu</strong> – “Good combo at this price range.”</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script>
+    let isInCart = false;
+    function toggleCart() {
+      const message = document.getElementById("cartMessage");
+      if (!isInCart) {
+        message.textContent = "✅ Product added to cart!";
+      } else {
+        message.textContent = "🗑️ Product removed from cart!";
+      }
+      isInCart = !isInCart;
+    }
+  </script>
+
+</body>
+</html>

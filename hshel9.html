@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f1f3f6;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Header */
+    header {
+      background-color: #d11c73;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .header-left img {
+      height: 50px;
+      width: 50px;
+      border-radius: 5px;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+    }
+
+    .back-link {
+      font-size: 30px;
+      text-decoration: none;
+      color: white;
+    }
+
+   
+
+    /* Container */
+    .container {
+      background-color: #fff;
+      padding: 20px;
+      margin: 30px auto;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      max-width: 900px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .main-image {
+      width: 100%;
+      max-width: 450px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .buttons {
+      margin: 15px 0;
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .buttons button {
+      padding: 10px 25px;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .add-cart {
+      background-color: #ff4081;
+      color: white;
+    }
+
+    .buy-now {
+      background-color: #3f51b5;
+      color: white;
+    }
+
+    .product-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .price {
+      color: #e53935;
+      font-size: 22px;
+      margin: 10px 0;
+      text-align: center;
+    }
+
+    
+    .details, .seller, .ratings {
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .ratings-bar {
+      height: 8px;
+      background-color: #ddd;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .ratings-fill {
+      height: 100%;
+      background-color: #4caf50;
+    }
+
+    .reviews {
+      background-color: #fafafa;
+      padding: 10px;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+
+    .review {
+      border-top: 1px solid #ddd;
+      padding: 10px 0;
+    }
+
+    .message {
+      margin-top: 10px;
+      font-weight: bold;
+      color: #007bff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-left">
+      <a href="javascript:history.back()" class="back-link">&larr;</a>
+      <img src="logo.jpeg" alt="Logo">
+      <div class="logo">EventEase</div>
+    </div>
+    
+  </header>
+
+  <!-- Product Container -->
+  <div class="container">
+    <img src="held3.jpeg" alt="Product" class="main-image">
+
+    <div class="buttons">
+      <button class="add-cart" onclick="toggleCart()">Add to Cart</button>
+      <a href="buy.html"><button class="buy-now">Buy Now</button></a>
+    </div>
+
+    <p id="cartMessage" class="message"></p>
+
+    <div class="right-section">
+      <div class="product-title">Lotus Mandala Theme</div>
+      <p> A divine, meditative setup built around the sacred symbol of the lotus and mandala patterns. Ideal for spiritual functions or serene rituals.!</p>
+      <div class="price">₹19000 <span style="font-size: 14px; color: #666;"></span></div>
+
+     
+
+      <div class="details">
+        <h3>Product Details</h3>
+        <p>
+          <strong>🌼 Theme Name:</strong> Lotus Mandala Theme<br>
+          <strong> Stage Platform:</strong>Green carpeted floor, bordered with LED strips or white petals
+Mandala-shaped rangoli using rice flour, petals, and colored powders
+Lotus petal patterns point inward, drawing attention to the center.<br>
+        <strong>Seating:</strong>A single, gold-painted ottoman
+Compact and elegant, perfect for solo or couple portraits during ceremonies<br>
+        <strong>Backdrop:</strong>Circular LED ring with white/yellow floral wrapping
+Lights embedded within the structure create a glowing halo effect
+Minimal background clutter emphasizes symmetry and spiritual calm
+        <br>
+        <strong>Surrounding Decor:</strong>Multiple diyas arranged in mandala-like circles
+Low urli bowls with floating marigold petals
+Small potted plants or bamboo sticks to add an earthy finish
+        <br>
+        <strong>Props & Signage:</strong>Circular LED board can hold couple initials or spiritual symbol (like “Om” or “Shubh”)
+Optional signage board with event name or Sanskrit verse
+Lotus-shaped diya holders for visual symmetry<br>
+        <strong>Nature Elements:</strong> Fresh lotus petals, white rose petals, banana leaves
+Green turf or leaf mats for the floor
+Sacred tulsi or sandalwood incense to purify space
+<br>
+        <strong>Origin:</strong> India</p>
+      </div>
+
+      <div class="seller">
+        <h3>Sold By</h3>
+        <p><strong>EVENTEASE</strong><br>
+        ★ 4.8 | 203 ratings</p>
+      </div>
+
+      <div class="ratings">
+        <h3>Ratings & Reviews</h3>
+        <p style="font-size: 24px; font-weight: bold;">4.8★</p>
+        <div class="ratings-bar">
+          <div class="ratings-fill" style="width: 80%;"></div>
+        </div>
+
+        <div class="reviews">
+          <div class="review"><strong>Manasa</strong> – “Very comfortable and nice quality.”</div>
+          <div class="review"><strong>Sowmya</strong> – “Good combo at this price range.”</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script>
+    let isInCart = false;
+    function toggleCart() {
+      const message = document.getElementById("cartMessage");
+      if (!isInCart) {
+        message.textContent = "✅ Product added to cart!";
+      } else {
+        message.textContent = "🗑️ Product removed from cart!";
+      }
+      isInCart = !isInCart;
+    }
+  </script>
+
+</body>
+</html>

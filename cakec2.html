@@ -1,0 +1,251 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f1f3f6;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Header */
+    header {
+      background-color: #d11c73;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .header-left img {
+      height: 50px;
+      width: 50px;
+      border-radius: 5px;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+    }
+
+    .back-link {
+      font-size: 30px;
+      text-decoration: none;
+      color: white;
+    }
+
+    
+    /* Container */
+    .container {
+      background-color: #fff;
+      padding: 20px;
+      margin: 30px auto;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      max-width: 900px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .main-image {
+      width: 100%;
+      max-width: 450px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .buttons {
+      margin: 15px 0;
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .buttons button {
+      padding: 10px 25px;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .add-cart {
+      background-color: #ff4081;
+      color: white;
+    }
+
+    .buy-now {
+      background-color: #3f51b5;
+      color: white;
+    }
+
+    .product-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .price {
+      color: #e53935;
+      font-size: 22px;
+      margin: 10px 0;
+      text-align: center;
+    }
+
+    
+    .details, .seller, .ratings {
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .ratings-bar {
+      height: 8px;
+      background-color: #ddd;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .ratings-fill {
+      height: 100%;
+      background-color: #4caf50;
+    }
+
+    .reviews {
+      background-color: #fafafa;
+      padding: 10px;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+
+    .review {
+      border-top: 1px solid #ddd;
+      padding: 10px 0;
+    }
+
+    .message {
+      margin-top: 10px;
+      font-weight: bold;
+      color: #007bff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-left">
+      <a href="javascript:history.back()" class="back-link">&larr;</a>
+      <img src="logo.jpeg" alt="Logo">
+      <div class="logo">EventEase</div>
+    </div>
+   
+  </header>
+
+  <!-- Product Container -->
+  <div class="container">
+    <img src="c3.webp" alt="Product" class="main-image">
+
+    <div class="buttons">
+      <button class="add-cart" onclick="toggleCart()">Add to Cart</button>
+      <a href="buy.html"><button class="buy-now">Buy Now</button></a>
+    </div>
+
+    <p id="cartMessage" class="message"></p>
+
+    <div class="right-section">
+      <div class="product-title">Royal Teddy & Train Adventure Cake</div>
+      <p>All aboard the cutest birthday journey! This royal teddy cake features two vibrant blue tiers adorned with golden crowns, a fondant train, clouds, stars, and adorable teddy bears—including one flying in a hot air balloon! Perfect for a boy's birthday, especially 1st birthdays or themed parties like “Teddy Bear Kingdom” or “Baby’s Royal Ride.”
+
+
+
+.</p>
+      <div class="price">₹2,499 <span style="font-size: 14px; color: #666;"></span></div>
+
+     
+
+      <div class="details">
+        <h3>Product Details</h3>
+        <p>
+          <strong> 🎂Cake Name:</strong>Royal Teddy & Train Adventure Cake<br>
+<br>
+          <strong>Cake Features:</strong>
+Flavor Options: Vanilla, Chocolate, Butterscotch, Red Velvet<br>
+<br>
+<strong>size Options:</strong> 
+
+2-Tier (2.5 kg – Serves 20–25)
+
+3-Tier (Optional upgrade – 4+ kg)<br>
+<br>
+<strong>Decoration:</strong>
+
+Handcrafted fondant teddy bears
+
+3D hot air balloon, train, milk bottle
+
+Stars, clouds, golden crown accents
+
+Personalized fondant name (e.g., “SHIVAAY”)
+<br>
+<br>
+        <strong>🚚 Delivery:</strong>Standard / Midnight / Same-day<br>
+        <br>
+
+<strong>Packaging:</strong>Multi-tier protective box<br>
+<br>
+<strong>Note:</strong>Keep cool; consumed within 24 hours
+</strong> India</p>
+      </div>
+
+      <div class="seller">
+        <h3>Sold By</h3>
+        <p><strong>EVENTEASE</strong><br>
+        ★ 4.8 | 203 ratings</p>
+      </div>
+
+      <div class="ratings">
+        <h3>Ratings & Reviews</h3>
+        <p style="font-size: 24px; font-weight: bold;">4.8★</p>
+        <div class="ratings-bar">
+          <div class="ratings-fill" style="width: 80%;"></div>
+        </div>
+
+        <div class="reviews">
+          <div class="review"><strong>kethika</strong> – “Nice Cake”</div>
+          <div class="review"><strong>Sony</strong> – “Its to Tasty.”</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script>
+    let isInCart = false;
+    function toggleCart() {
+      const message = document.getElementById("cartMessage");
+      if (!isInCart) {
+        message.textContent = "✅ Product added to cart!";
+      } else {
+        message.textContent = "🗑 Product removed from cart!";
+      }
+      isInCart = !isInCart;
+    }
+  </script>
+
+</body>
+</html>

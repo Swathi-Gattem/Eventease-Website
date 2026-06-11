@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marrige home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      padding: 20px;
+      background: #f9f9f9;
+      display: flex;
+      flex-direction: column;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 50px;
+      color: #d11c73;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 30px;
+      margin-top: 10px;
+    }
+
+    header {
+      background-color: #d11c73;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 700;
+      color: white;
+    }
+    .header-left img {
+      max-width: 60px;
+      height: auto;
+    }
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .back-link {
+    font-size: 32px; /* Adjust this value to control arrow size */
+    text-decoration: none;
+    color: white;
+    }
+    section {
+      margin-top: 40px;
+      padding-top: 30px;
+    }
+
+    .image-row {
+      display: flex;
+      justify-content: center;
+      gap: 70px;
+      margin: 20px 0 40px 0;
+      flex-wrap: wrap;
+    }
+
+    .image-row img {
+      width: 300px;
+      height: 300px;
+      border-radius: 100%;
+      object-fit: cover;
+      border: 2px solid #333;
+    }
+
+    @media (max-width: 600px) {
+      .image-row img {
+        width: 140px;
+        height: 140px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-left">
+        <a href="javascript:history.back()" class="back-link">&larr;</a>
+
+        <img src="logo.jpeg">
+      <div class="logo">EventEase</div>
+    </div>
+    <div class="header-left">
+      <nav>
+        <a href="halfsareeheldi.html">Haldi</a>
+        <a href="halsareefun.html">Function</a>
+        
+        <a href="halfsareecard.html">Invitation cards</a>
+        <a href="menu.html">Menu</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="home">
+    <h1>Welcome to Halfsaree Ceremony</h1>
+    <div class="image-row">
+        <a href="halfsareeheldi.html">
+      <img src="hlk1.jpeg" alt="Haldi">
+        </a>
+        <a href="halsareefun.html">
+      <img src="look1.jpeg" alt="Mehandhi">
+        </a>
+        
+    </div>
+  </section>
+  </body>
+  </html>

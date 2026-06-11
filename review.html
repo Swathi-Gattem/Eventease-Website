@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Write a Review - EventEase</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #fdf1f7;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #d11c73;
+      color: white;
+      padding: 15px 30px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #d11c73;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 12px 15px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 15px;
+    }
+
+    textarea {
+      height: 100px;
+      resize: vertical;
+    }
+
+    label {
+      font-weight: 500;
+      margin-bottom: 6px;
+      display: block;
+      color: #333;
+    }
+
+    .rating {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: flex-start;
+      margin-bottom: 20px;
+    }
+
+    .rating input {
+      display: none;
+    }
+
+    .rating label {
+      font-size: 24px;
+      color: #ccc;
+      cursor: pointer;
+    }
+
+    .rating input:checked ~ label,
+    .rating label:hover,
+    .rating label:hover ~ label {
+      color: gold;
+    }
+
+    button {
+      background: #d11c73;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #b01361;
+    }
+
+    .success-message {
+      display: none;
+      background-color: #d4edda;
+      color: #155724;
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 20px;
+      border: 1px solid #c3e6cb;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    EventEase - Write a Review
+  </header>
+
+  <div class="container">
+    <h2>We'd love your feedback!</h2>
+    <form id="reviewForm">
+      <label for="name">Your Name*</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+     
+      <label for="message">Your Review*</label>
+      <textarea id="message" name="message" placeholder="Share your experience..." required></textarea>
+
+      <label>Rating*</label>
+      <div class="rating">
+        <input type="radio" id="star5" name="rating" value="5" required><label for="star5">&#9733;</label>
+        <input type="radio" id="star4" name="rating" value="4"><label for="star4">&#9733;</label>
+        <input type="radio" id="star3" name="rating" value="3"><label for="star3">&#9733;</label>
+        <input type="radio" id="star2" name="rating" value="2"><label for="star2">&#9733;</label>
+        <input type="radio" id="star1" name="rating" value="1"><label for="star1">&#9733;</label>
+      </div>
+
+      <button type="submit">Submit Review</button>
+    </form>
+
+    <div class="success-message" id="successMessage">
+      ✅ Your review has been submitted successfully!
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('reviewForm');
+    const successMessage = document.getElementById('successMessage');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent form submission
+      successMessage.style.display = 'block';
+      form.reset(); // Clear the form fields
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f1f3f6;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Header */
+    header {
+      background-color: #d11c73;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .header-left img {
+      height: 50px;
+      width: 50px;
+      border-radius: 5px;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+    }
+
+    .back-link {
+      font-size: 30px;
+      text-decoration: none;
+      color: white;
+    }
+
+   
+
+    /* Container */
+    .container {
+      background-color: #fff;
+      padding: 20px;
+      margin: 30px auto;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      max-width: 900px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .main-image {
+      width: 100%;
+      max-width: 450px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .buttons {
+      margin: 15px 0;
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .buttons button {
+      padding: 10px 25px;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .add-cart {
+      background-color: #ff4081;
+      color: white;
+    }
+
+    .buy-now {
+      background-color: #3f51b5;
+      color: white;
+    }
+
+    .product-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .price {
+      color: #e53935;
+      font-size: 22px;
+      margin: 10px 0;
+      text-align: center;
+    }
+
+   
+    .details, .seller, .ratings {
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .ratings-bar {
+      height: 8px;
+      background-color: #ddd;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .ratings-fill {
+      height: 100%;
+      background-color: #4caf50;
+    }
+
+    .reviews {
+      background-color: #fafafa;
+      padding: 10px;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+
+    .review {
+      border-top: 1px solid #ddd;
+      padding: 10px 0;
+    }
+
+    .message {
+      margin-top: 10px;
+      font-weight: bold;
+      color: #007bff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-left">
+      <a href="javascript:history.back()" class="back-link">&larr;</a>
+      <img src="logo.jpeg" alt="Logo">
+      <div class="logo">EventEase</div>
+    </div>
+   
+  </header>
+
+  <!-- Product Container -->
+  <div class="container">
+    <img src="sangeeth.webp" alt="Product" class="main-image">
+
+    <div class="buttons">
+      <button class="add-cart" onclick="toggleCart()">Add to Cart</button>
+      <a href="buy.html"><button class="buy-now">Buy Now</button></a>
+    </div>
+
+    <p id="cartMessage" class="message"></p>
+
+    <div class="right-section">
+      <div class="product-title">Royal Raga Stage Decor </div>
+      <p>Deep royal blue walls with traditional Rajasthani wall patterns make the entire space feel majestic.The combination of classic architecture and modern lighting rig gives a fusion look—traditional roots with a modern vibe</p>
+      <div class="price">₹25000 <span style="font-size: 14px; color: #666;"></span></div>
+
+    
+
+      <div class="details">
+        <h3>Decoration Details</h3>
+        <p><strong>🌼 Theme Name:</strong>Royal Raga Stage Decor<br>
+        <strong>Fabric Draping:</strong> Ceiling covered in colorful fabric panels (yellow, pink, orange, blue, green) radiating outward from a central pillar<br>
+        <strong>🏛️ Stage Structure:</strong> Elevated platform with a white base and detailed railing gives a luxurious palace-style vibe. Backdrop is crafted using a mesh/lattice frame adorned with hanging white flowers and red rose bunches for a balanced floral contrast.<br>
+        <strong>🪑 Guest Area</strong>Luxury dining chairs visible on the sides. Clear distinction between performance zone (center) and audience/dining zone.<br>
+        <strong>🪩 Dance Floor: </strong>Checkered LED-lit dance floor, reflecting blue/purple beams for an immersive disco effect. Smooth, shiny surface ideal for dancing and performances.<br>
+        <strong>Flooring:</strong> Natural grass or jute mat base, keeping the setting earthy and grounded<br>
+        <strong>💡 Ceiling & Lighting</strong> Dense gold shimmer hangings, mimicking a "gold rain" or chandelier illusion. Interspersed with pendant chandeliers and reflective elements like disco balls and crystal drops.</p>
+      </div>
+
+      <div class="seller">
+        <h3>Sold By</h3>
+        <p><strong>EVENTEASE</strong><br>
+        ★ 5 /5| 203 ratings</p>
+      </div>
+
+      <div class="ratings">
+        <h3>Ratings & Reviews</h3>
+        <p style="font-size: 24px; font-weight: bold;">4.8/5★</p>
+        <div class="ratings-bar">
+          <div class="ratings-fill" style="width: 80%;"></div>
+        </div>
+
+        <div class="reviews">
+          <div class="review"><strong>Kavya</strong> – “Very comfortable and nice quality.”</div>
+          <div class="review"><strong>Siri</strong> – “Good combo at this price range.”</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script>
+    let isInCart = false;
+    function toggleCart() {
+      const message = document.getElementById("cartMessage");
+      if (!isInCart) {
+        message.textContent = "✅ Product added to cart!";
+      } else {
+        message.textContent = "🗑️ Product removed from cart!";
+      }
+      isInCart = !isInCart;
+    }
+  </script>
+
+</body>
+</html>

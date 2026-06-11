@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Example</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    h1 {
+      text-align: center;
+      font-size: 50px;
+      color: #d11c73;
+    }
+    * {
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+    }
+
+    header {
+      background-color: #d11c73;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 700;
+      color: white;
+    }
+    .back-link {
+    font-size: 32px; /* Adjust this value to control arrow size */
+    text-decoration: none;
+    color: white;
+    }
+    .header-left img {
+      max-width: 60px;
+      height: auto;
+    }
+
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 40px; /* This adds the gap between images */
+      padding: 50px 100px;
+    }
+
+    .image-grid img {
+  width: 100%;
+  height: 350px;
+  object-fit: contain; /* Maintains full image without cropping */
+  background-color: white; 
+  object-position: left;/* Optional: fills background if image doesn't fill box */
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.image-container {
+      display: flex;
+      justify-content: flex-start; /* Align image to the right */
+      margin-top: 50px; /* Push it down */
+      margin-left: 100px;
+      padding-right: 30px; /* Add some space from the right edge */
+    }
+
+    .image-container img {
+      width: 400px;
+      height: 300px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-left">
+        <a href="javascript:history.back()" class="back-link">&larr;</a>
+
+      <img src="logo.jpeg" alt="Logo">
+      <div class="logo">EventEase</div>
+    </div>
+  </header>
+
+  <!-- Image grid with spacing -->
+   <section>
+   <h1>Invitation</h1>
+  <div class="image-grid">
+    
+    <img src="nic1.jpeg" alt="Hindu Wedding">
+    
+    
+    <img src="nic2.jpeg" alt="Hindu Wedding">
+  </div>
+  <div class="image-grid">
+    <img src="nic3.jpeg" alt="Hindu Wedding">
+    
+    <img src="nic4.jpeg" alt="Hindu Wedding">
+  </div>
+  <div class="image-grid">
+    <img src="nic5.jpeg" alt="Hindu Wedding">
+    
+    <img src="nic6.jpg" alt="naming ceremony">
+  </div>
+  </section>
+ 
+   <section>
+    <h1>Photography</h1>
+    <div class="image-grid">
+        <img src="camera.jpeg" alt="photography">
+    </div>
+   </section>
+</body>
+</html>

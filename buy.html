@@ -87,10 +87,8 @@
 
   <script>
     function payWithCard() {
-      const name = document.getElementById("name").value || "Customer";
-      const email = document.getElementById("email").value || "test@example.com";
-      const amount = parseFloat(document.getElementById("amount").value || "0") * 100;
-
+const name = "EventEase";
+const email = "EventEase@gmail.com";
       if (amount < 100) {
         alert("Amount should be at least ₹1");
         return;
@@ -105,10 +103,10 @@
         "handler": function (response) {
           alert("✅ Payment Successful!\nPayment ID: " + response.razorpay_payment_id);
         },
-        "prefill": {
-          "name": name,
-          "email": email,
-        },
+       prefill: {
+    name: "EventEase",
+    email: "EventEase@gmail.com",
+},
         "theme": {
           "color": "#3f51b5"
         },
